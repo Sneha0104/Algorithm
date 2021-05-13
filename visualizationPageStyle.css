@@ -21,7 +21,7 @@
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 6px 8px 1px black; /* this adds the "card" effect */
+  box-shadow: 0 4px 8px 1px black; /* this adds the "card" effect */
   padding-left: 20px;
   padding-bottom: 300px;
   padding-right: 20px;
