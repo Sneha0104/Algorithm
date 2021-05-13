@@ -91,12 +91,19 @@ body {
 }
 
 .VisualizationMainPage  #header { 
-	background: #006633; 
-	color:#ffCC33;
-	padding: 0 10px 0 20px; 
-	width: 100%;
-	
-  
+
+    margin: 0%;
+    background-color: #242582;
+    color: rgb(245, 231, 231);
+    left:0;
+    right:0;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 2px;
+
 } 
  
 .VisualizationMainPage #header  A:visited 
@@ -129,7 +136,7 @@ body {
 
 .VisualizationMainPage #footer A:link {
     text-decoration:none;
-	color:#ffCC33;
+	color:white;
 }
 
 
@@ -138,7 +145,7 @@ body {
 .VisualizationMainPage #mainContent h1{
 	padding: 0 20px; 
 	background: #FFFFFF;
-	color:#006633
+	color:#006633;
 }
 
 .VisualizationMainPage #mainContent h2{
@@ -156,9 +163,16 @@ body {
 
 
 .VisualizationMainPage #footer { 
-	padding: 0 10px;
-    background: #006633; 
-	color:#ffcc33;
+	float: left;
+    margin: 0;
+    color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #242582;
+    text-align: center;
+    padding: 15px;
 } 
 .VisualizationMainPage #footer p {
 	margin: 0; 	padding: 10px 0; 
