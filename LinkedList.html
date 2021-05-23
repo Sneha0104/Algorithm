@@ -15,13 +15,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-
+	
+	<!-- <link rel="stylesheet" href="visualizationPageStyle.css"> -->
 	<link rel="stylesheet" href="LinkedList/css/style.css" />
 	<link rel="stylesheet" href="LinkedList/css/responisve.css" />
 	<title>Linked List Visualization</title>
 </head>
 
-<body>
+<body onload="init();" class="VisualizationMainPage">
+	<div id="container">
 	<div class="navbar">
 		<a class="active" href="index.html" style="font-size: 20px;"><i class="fa fa-fw fa-home"></i> Home</a>
 		<a style="font-size: 20px;"> Data Structure and Algorithms Visualizations</a>
@@ -64,15 +66,16 @@
 		</div>
 	</div> -->
 
-	<header>
+	<!-- <header>
 		<div class="header-container">
 			<div class="navbar">
 				<a class="active" href="index.html" style="font-size: 20px;"><i class="fa fa-fw fa-home"></i> Home</a>
 				<a style="font-size: 20px;"> Data Structure and Algorithms Visualizations</a>
 			</div>
 		</div>
-	</header>
-
+	</header> -->
+    <h1 style="text-align: center;">Linked List</h1>
+	<div id="mainContent">
 	<div class="row">
 		<div class="column">	
 
@@ -141,13 +144,15 @@
 			</main>
 		</div>
 	</div>
+	</div>
 
 	<script src="LinkedList/vendor/js/fontawesome.js"></script>
 	<script src="LinkedList/LinkedList.js"></script>
 	<script src="LinkedList/main.js"></script>
 	<script src="LinkedList/theme.js"></script>
 	<script src="LinkedList/settings.js"></script>
+	</div>
 </body>
-<div class="footer"></div>
-
+<br/><br/>
+<div id="footer"></div>
 </html>
