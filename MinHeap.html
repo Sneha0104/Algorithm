@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" href="visualizationPageStyle.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- jqueury stuff.  Only used for the animation speed slider. -->
 	<link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">
@@ -39,15 +39,15 @@
 
 <body onload="init();" class="VisualizationMainPage">
 	<div id="container">
-	<div class="navbar">
-		<a class="active" href="index.html" style="font-size: 20px;"><i class="fa fa-fw fa-home"></i> Home</a>
-		<a style="font-size: 20px; text-align: left;"> Data Structure and Algorithms Visualizations</a>
-	</div>
-	
+		<div class="navbar">
+			<a class="active" href="index.html" style="font-size: 20px;"><i class="fa fa-fw fa-home"></i> Home</a>
+			<a style="font-size: 20px; text-align: left;"> Data Structure and Algorithms Visualizations</a>
+		</div>
 
-		
-			<h1 style="text-align: center;">Min Heap</h1>
-		
+
+
+		<h1 style="text-align: center;">Min Heap</h1>
+
 
 		<div id="mainContent">
 
@@ -55,7 +55,42 @@
 				<div class="column">
 
 					<div class="card1"></div>
-					<div class="card">..</div>
+					<div class="card">
+						<p> <code>
+							heapify(int arr[], int size, int i)
+							{
+							</br>
+							</br>
+							largest = i,left = 2*i + 1, 
+						    </br>right = 2*i + 2</br>
+							</br>
+							if (left < size && arr[left]>arr[largest])</br>
+								largest = left
+							</br></br>
+								if (right < size && arr[right]> arr[largest])</br>
+									largest = right
+								</br></br>
+									if (largest != i)
+									{</br>
+									temp = arr[i];</br>
+									arr[i]= arr[largest];</br>
+									arr[largest] = temp;</br>
+									heapify(arr, size, largest);</br>
+									}
+								}
+								</br></br>
+
+									void heapSort(int arr[], int size)
+									{</br></br>
+									for (i = size / 2 - 1 to 0)</br>
+									heapify(arr, size, i);</br>
+									for (i=size-1 to 0)
+									{</br>
+									swap(arr[0],arr[i])</br>
+									heapify(arr, i, 0)</br>
+									}
+									}</code></p>
+					</div>
 					<div class="card1"></div>
 					<div class="card">..</div>
 					<div class="card1"></div>
@@ -71,12 +106,12 @@
 
 					<canvas id="canvas" width="1000" height="500"></canvas>
 
-							<div id="generalAnimationControlSection">
-								<table id="GeneralAnimationControls"> </table>
-							</div>
+					<div id="generalAnimationControlSection">
+						<table id="GeneralAnimationControls"> </table>
+					</div>
 				</div>
 			</div>
-		</div> 
+		</div>
 		<div id="footer">
 
 		</div>

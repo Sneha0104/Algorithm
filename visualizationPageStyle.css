@@ -22,10 +22,10 @@
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 1px black; /* this adds the "card" effect */
-  padding-left: 20px;
+  padding-left: 10px;
   padding-bottom: 300px;
-  padding-right: 20px;
-  text-align: center;
+  padding-right: 10px;
+  text-align: left;
   background-color: lightgrey;
 }
 .card1 {
@@ -201,4 +201,10 @@ EM {text-decoration: bold;}
 
 .active {
   background-color: #242582;
+}
+code {
+  font-family: Consolas,"courier new";
+  color: black;
+  padding: 2px;
+  font-size: 80%;
 }
