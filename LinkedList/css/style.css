@@ -4,7 +4,7 @@
 .column {
     float: left;
     width: 25%;
-    padding: 10px 10px;
+    padding: 5px 5px;
   }
 .row {
     margin: 0 -5px;
@@ -614,7 +614,6 @@ div.error-message p {
     padding: 10px;
     width: 100%;
     background-color:#242582;
-    overflow: auto;
   }
   
   .navbar a {

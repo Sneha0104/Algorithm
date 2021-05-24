@@ -57,8 +57,8 @@
 					<div class="card1"></div>
 					<div class="card">
 						<p> <code>
-							heapify(int arr[], int size, int i)
-							{
+							<b>heapify(int arr[], int size, int i)
+								{</b>
 							</br>
 							</br>
 							largest = i,left = 2*i + 1, 
@@ -75,25 +75,39 @@
 									temp = arr[i];</br>
 									arr[i]= arr[largest];</br>
 									arr[largest] = temp;</br>
-									heapify(arr, size, largest);</br>
+									heapify(arr, size, largest);
 									}
-								}
-								</br></br>
+								<b>}</b></p>
+								<p>
+							
 
-									void heapSort(int arr[], int size)
-									{</br></br>
+									<b>void heapSort(int arr[], int size) {</b>
+									</br></br>
 									for (i = size / 2 - 1 to 0)</br>
-									heapify(arr, size, i);</br>
+									heapify(arr, size, i);</br></br>
 									for (i=size-1 to 0)
 									{</br>
 									swap(arr[0],arr[i])</br>
 									heapify(arr, i, 0)</br>
 									}
-									}</code></p>
+									<b>}</b></code></p>
 					</div>
 					<div class="card1"></div>
-					<div class="card">..</div>
-					<div class="card1"></div>
+					<div class="card">
+						<p>
+						<b>Get Root:</b> It returns the root element of Min Heap. </br>
+						Time Complexity: O(1).</br></br>
+
+						<b>Extract Minimum:</b> Removes the minimum element from MinHeap. </br>
+						Time Complexity: O(Logn) </br></br>
+						
+						<b>Insert:</b> Insert an element</br>
+						Time Complexity: O(Logn) </br></br>	
+						
+						<b>Delete:</b> Deleting an element</br>
+						Time Complexity: O(Logn) </div>
+					</p>
+						<div class="card1"></div>
 
 				</div>
 

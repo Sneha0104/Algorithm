@@ -23,7 +23,7 @@
 .card {
   box-shadow: 0 4px 8px 1px black; /* this adds the "card" effect */
   padding-left: 10px;
-  padding-bottom: 300px;
+  padding-bottom: 30px;
   padding-right: 10px;
   text-align: left;
   background-color: lightgrey;
@@ -102,6 +102,7 @@ body {
     font-size: 20px;
     line-height: 20px;
     border-radius: 2px;
+    max-width: 100%;
 } 
  
 .VisualizationMainPage #header  A:visited 
