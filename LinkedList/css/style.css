@@ -265,7 +265,7 @@ section.list {
 /* ----------------------------------------------------------------- */
 
 div.node {
-    background:#8900e8;
+    background: #242582;
     width: var(--nodes-size);
     height: var(--nodes-size);
     text-align: center;
@@ -421,10 +421,10 @@ section.operations {
 }
 
 div.wrapper {
-    width: 95%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 0 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(120px, auto);
     text-align: center;
 }
@@ -482,7 +482,7 @@ div.remove input {
 /* ----------------------------------------------------------------- */
 
 div.remove {
-    width: 30%;
+    width: 20%;
     margin: 0 auto;
     display: flex;
     transition: all .2s ease-in-out;
