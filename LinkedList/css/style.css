@@ -265,7 +265,7 @@ section.list {
 /* ----------------------------------------------------------------- */
 
 div.node {
-    background:#8900e8;
+    background:#242582;
     width: var(--nodes-size);
     height: var(--nodes-size);
     text-align: center;
