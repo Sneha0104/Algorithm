@@ -53,7 +53,50 @@
 					<div class="column">
 	
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+						<p>
+						<b>void BFS(int s)
+						{</b><br>
+							<br>
+							bool *visited = new bool[V];<br>
+							for(int i = 0; i < V; i++)<br>
+								visited[i] = false;<br>
+						
+							<br>
+							list<int> queue;<br>
+						
+							visited[s] = true;<br>
+							queue.push_back(s);<br>
+						
+							<br>
+							list<int>::iterator i;<br>
+						
+							while(!queue.empty())
+							{<br>
+								<br>
+								s = queue.front();<br>
+								cout << s << " ";<br>
+								queue.pop_front();<br>
+								<br>
+	
+								for (i = adj[s].begin(); i != adj[s].end(); ++i)
+								{<br><br>
+									if (!visited[*i])
+									{<br><br>
+										visited[*i] = true;<br>
+										queue.push_back(*i);
+									}<br>
+								}<br>
+							}<br>
+						<b>}</b>
+						
+						
+						
+						</p>
+			
+
+
+						</div>
 						<div class="card1"></div>
 						<div class="card">..</div>
 						<div class="card1"></div>
