@@ -53,9 +53,147 @@
 					<div class="column">
 	
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+						<p> <code>
+						<b>int height(Node *N)
+						{</b>
+							<br>if (N == NULL)<br>
+								   return 0;<br>
+							return return N->height;;<br>
+						<b>}</b><br>
+						<b>Node *rightRotate(Node *y)
+							{</b><br>
+								Node *x = y->left;<br>
+								Node *T2 = x->right;<br>
+								x->right = y;<br>
+								y->left = T2;<br>
+								y->height = max(height(y->left),
+												height(y->right)) + 1;<br>
+								x->height = max(height(x->left),
+												height(x->right)) + 1;<br>
+								return x;<br>
+							<b>}<br>
+							Node *leftRotate(Node *x)
+								{</b><br>
+									Node *y = x->right;<br>
+									Node *T2 = y->left;<br>
+									y->left = x;<br>
+									x->right = T2;<br>
+									x->height = max(height(x->left),   
+													height(x->right)) + 1;<br>
+									y->height = max(height(y->left),
+													height(y->right)) + 1;<br>
+									return y;<br>
+								<b>}<br>
+								int getBalance(Node *N)
+								{</b><br>
+									if (N == NULL)<br>
+										return 0;<br>
+									return height(N->left) - height(N->right);<br>
+								<b>}<br>
+								Node* insert(Node* node, int key)
+									{</b></br>
+										if (node == NULL)</br>
+											return(newNode(key));</br>
+										if (key < node->key)</br>
+											node->left = insert(node->left, key);</br>
+										else if (key > node->key)</br>
+											node->right = insert(node->right, key);</br>
+										else </br>
+											return node;</br>
+										node->height = 1 + max(height(node->left),
+															height(node->right));</br>
+										int balance = getBalance(node);</br>
+										if (balance > 1 && key < node->left->key)</br>
+											return rightRotate(node);</br>
+										if (balance < -1 && key > node->right->key)</br>
+											return leftRotate(node);</br>
+										if (balance > 1 && key > node->left->key)</br>
+										{</br>
+											node->left = leftRotate(node->left);</br>
+											return rightRotate(node);</br>
+										}</br>
+										if (balance < -1 && key < node->right->key)</br>
+										{</br>
+											node->right = rightRotate(node->right);</br>
+											return leftRotate(node);</br>
+										}</br>
+										return node;</br>
+									<b>}</br> 
+									Node * minValueNode(Node* node) 
+									{ </b><br>
+										Node* current = node; <br>
+										while (current->left != NULL) <br>
+											current = current->left; <br>
+										return current; <br>
+									<b>} <br>
+									Node* deleteNode(Node* root, int key) 
+							{ </b><br>
+							if (root == NULL) <br>
+								return root; <br>
+							if ( key < root->key ) <br>
+								root->left = deleteNode(root->left, key); <br>
+
+							else if( key > root->key ) <br>
+								root->right = deleteNode(root->right, key); <br>		
+							else<br>
+							{ <br>
+								if( (root->left == NULL) ||
+									(root->right == NULL) ) <br>
+								{ <br>
+									Node *temp = root->left ? 
+												root->left : 
+												root->right; <br> 
+									if (temp == NULL) <br>
+									{ <br>
+										temp = root; <br>
+										root = NULL; <br>
+									} <br>
+									*root = *temp; <br>
+									free(temp); <br>
+								} <br>
+								else<br>
+								{ <br>
+									Node* temp = minValueNode(root->right); <br>
+									root->key = temp->key; <br>
+									root->right = deleteNode(root->right, 
+															temp->key); <br>
+								} <br>
+							} <br>
+							if (root == NULL) <br>
+							return root; <br> 
+							root->height = 1 + max(height(root->left), <br>
+												height(root->right)); <br>
+	
+							int balance = getBalance(root); <br>
+							if (balance > 1 && <br>
+								getBalance(root->left) >= 0) <br>
+								return rightRotate(root); <br>
+							if (balance > 1 && <br>
+								getBalance(root->left) < 0) <br>
+							{ <br>
+								root->left = leftRotate(root->left); <br>
+								return rightRotate(root); <br>
+							} <br>
+						
+							if (balance < -1 && <br>
+								getBalance(root->right) <= 0) 
+								return leftRotate(root); <br>
+						
+							if (balance < -1 && <br>
+								getBalance(root->right) > 0) <br>
+							{ <br>
+								root->right = rightRotate(root->right);<br> 
+								return leftRotate(root); <br>
+							} <br>
+							return root; <br>
+						<b>} </b>
+ 
+						</div>
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+						
+						</div>
 						<div class="card1"></div>
 	
 					</div>
