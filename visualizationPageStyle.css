@@ -23,7 +23,8 @@
 .card {
   box-shadow: 0 4px 8px 1px black; /* this adds the "card" effect */
   padding-left: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   padding-right: 10px;
   text-align: left;
   background-color: lightgrey;
@@ -208,4 +209,39 @@ code {
   color: black;
   padding: 2px;
   font-size: 80%;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  color: #444;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active1, .collapsible:hover {
+  background-color: #ccc;
+}
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active1:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }

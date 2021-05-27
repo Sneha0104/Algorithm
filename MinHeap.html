@@ -56,6 +56,8 @@
 
 					<div class="card1"></div>
 					<div class="card">
+						<button type="button" class="collapsible">View Code</button>
+						<div class="content">
 						<p> <code>
 							<b>heapify(int arr[], int size, int i)
 								{</b>
@@ -91,6 +93,7 @@
 									heapify(arr, i, 0)</br>
 									}
 									<b>}</b></code></p>
+					</div>
 					</div>
 					<div class="card1"></div>
 					<div class="card">
@@ -134,6 +137,22 @@
 		</div>
 
 	</div>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active1");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			  content.style.display = "none";
+			} else {
+			  content.style.display = "block";
+			}
+		  });
+		}
+		</script>
 </body>
 
 </html>
