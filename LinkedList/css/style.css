@@ -265,11 +265,7 @@ section.list {
 /* ----------------------------------------------------------------- */
 
 div.node {
-<<<<<<< HEAD
-    background: #242582;
-=======
     background:#242582;
->>>>>>> 1d59ece685ab7246c5eefd4959d11630600e21c3
     width: var(--nodes-size);
     height: var(--nodes-size);
     text-align: center;
