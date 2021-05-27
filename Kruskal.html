@@ -52,7 +52,48 @@
 				<div class="column">
 
 					<div class="card1"></div>
-					<div class="card">..</div>
+					<div class="card">
+					<p> 
+					<b>void AddWeightedEdge(int u, int v, int w) {</b><br>
+					<br>
+	
+  						G.push_back(make_pair(w, edge(u, v)));<br><b>}<br>
+						  <br>
+					int find_set(int i) {</b><br>
+					<br>
+			
+						if (i == parent[i])<br>
+						<br>
+							return i;<br><br>
+						else
+							<br><br>
+							return find_set(parent[i]);<br>
+					<b}<br>
+					<br>
+					<b>void union_set(int u, int v) {</b><br>
+					<br>
+  					parent[u] = parent[v];<br>
+					}<br>
+					<br>
+					<b>void kruskal() {</b><br>
+					<br>
+					int i, uRep, vRep;<br>
+					sort(G.begin(), G.end());  <br>
+					for (i = 0; i < G.size(); i++) {<br>
+					<br>
+						uRep = find_set(G[i].second.first);<br>
+						vRep = find_set(G[i].second.second);<br>
+						if (uRep != vRep) {<br>
+						<br>
+						T.push_back(G[i]);  <br>
+						union_set(uRep, vRep);<br>
+						}<br>
+					}
+					<b>}</b>
+					
+					
+					</p>
+					</div>
 					<div class="card1"></div>
 					<div class="card">..</div>
 					<div class="card1"></div>
