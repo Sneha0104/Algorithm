@@ -1,4 +1,4 @@
-﻿// Copyright 2011 David Galles, University of San Francisco. All rights reserved.
+// Copyright 2011 David Galles, University of San Francisco. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without modification, are
 // permitted provided that the following conditions are met:
@@ -85,16 +85,16 @@ QueueLL.prototype.addControls =  function()
 	this.controls = [];
 	this.enqueueField = addControlToAlgorithmBar("Text", "");
 	this.enqueueField.onkeydown = this.returnSubmit(this.enqueueField,  this.enqueueCallback.bind(this), 6);
-	this.enqueueButton = addControlToAlgorithmBar("Button", "Enqueue");
+	this.enqueueButton = addControlToAlgorithmBar("Button", "Insert");
 	this.enqueueButton.onclick = this.enqueueCallback.bind(this);
 	this.controls.push(this.enqueueField);
 	this.controls.push(this.enqueueButton);
 
-	this.dequeueButton = addControlToAlgorithmBar("Button", "Dequeue");
+	this.dequeueButton = addControlToAlgorithmBar("Button", "Remove");
 	this.dequeueButton.onclick = this.dequeueCallback.bind(this);
 	this.controls.push(this.dequeueButton);
 	
-	// this.clearButton = addControlToAlgorithmBar("Button", "Clear Queue");
+	// this.clearButton = addControlToAlgorithmBar("Button", "Clear");
 	// this.clearButton.onclick = this.clearCallback.bind(this);
 	// this.controls.push(this.clearButton);
 	
