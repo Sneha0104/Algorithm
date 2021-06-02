@@ -93,12 +93,12 @@ Hash.prototype.addControls = function()
 	this.findButton.onclick =  this.findCallback.bind(this);
 	
 	
-	var radioButtonList = addRadioButtonGroupToAlgorithmBar(["Hash Integer", "Hash Strings"], "HashType");
+	var radioButtonList = addRadioButtonGroupToAlgorithmBar(["Hash Integer"], "HashType");
 	this.hashIntegerButton = radioButtonList[0];
 	this.hashIntegerButton.onclick = this.changeHashTypeCallback.bind(this, true);
 //  this.hashIntegerButton.onclick = this.hashIntegerCallback.bind(this);
-	this.hashStringButton = radioButtonList[1];
-	this.hashStringButton.onclick = this.changeHashTypeCallback.bind(this, false);
+	// this.hashStringButton = radioButtonList[1];
+	// this.hashStringButton.onclick = this.changeHashTypeCallback.bind(this, false);
 
 //	this.hashStringButton.onclick = this.hashStringCallback.bind(this);
 	this.hashIntegerButton.checked = true;
