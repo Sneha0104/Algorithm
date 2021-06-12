@@ -50,9 +50,46 @@
 					<div class="column">
 	
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<button type="button" class="collapsible">View Code</button>
+						<div class="content">
+						<p> <code>
+							<b>Insert</b></br>
+							Step 1: IF REAR = MAX - 1</br>
+Write OVERFLOW</br>
+Go to step</br>
+[END OF IF]</br>
+Step 2: IF FRONT = -1 and REAR = -1</br>
+SET FRONT = REAR = 0</br>
+ELSE</br>
+SET REAR = REAR + 1</br>
+[END OF IF]</br>
+Step 3: Set QUEUE[REAR] = NUM</br>
+Step 4: EXIT</br></br>
+
+<b>Deletion</b></br>
+Step 1: IF FRONT = -1 or FRONT > REAR</br>
+Write UNDERFLOW</br>
+ELSE</br>
+SET VAL = QUEUE[FRONT]</br>
+SET FRONT = FRONT + 1</br>
+[END OF IF]</br>
+Step 2: EXIT</br>
+							</code></p>
+						</div>
+						</div>
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<div style="text-align: center;">
+								<b>Time Complexity</b></div>
+								<p>
+									<b>Enqueue:</b> Insert element to rear of queue </br>
+									Time Complexity: O(1)</br></br>
+		
+									<b>Dequeue:</b> Remove element from head of queue </br>
+									Time Complexity: O(n) </br></br>
+								</p>
+						</div>
 						<div class="card1"></div>
 	
 					</div>
@@ -79,5 +116,21 @@
 			</div>
 
 		</div><!-- container -->
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+				  content.style.display = "none";
+				} else {
+				  content.style.display = "block";
+				}
+			  });
+			}
+			</script>
 	</body>
 </html>

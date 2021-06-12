@@ -32,7 +32,7 @@ var PRINT_MAX = 990;
 var PRINT_HORIZONTAL_GAP = 50;
 
 var MIN_MAX_DEGREE = 3;
-var MAX_MAX_DEGREE = 7;
+var MAX_MAX_DEGREE = 5;
 
 var HEIGHT_DELTA  = 50;
 var NODE_SPACING = 3; 
@@ -156,7 +156,7 @@ BTree.prototype.addControls =  function()
 	}
 	
 	
-	this.premptiveSplitBox = addCheckboxToAlgorithmBar("Preemtive Split / Merge (Even max degree only)");
+	this.premptiveSplitBox = "";
 	this.premptiveSplitBox.onclick = this.premtiveSplitCallback.bind(this);
 	
 	

@@ -53,9 +53,28 @@
 					<div class="column">
 	
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<button type="button" class="collapsible">View Code</button>
+						<div class="content">
+						<p> <code>
+							</code></p>
+						</div>
+						</div>
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<div style="text-align: center;">
+								<b>Time Complexity</b></div>
+								<p>
+									<b>Insertion:</b> Insert element </br>
+									Time Complexity: O(log(n))</br></br>
+		
+									<b>Deletion:</b> Remove element </br>
+									Time Complexity: O(log(n)) </br></br>
+
+									<b>Searching:</b> Search for an element </br>
+									Time Complexity: O(log(n)) </br></br>
+								</p>
+						</div>
 						<div class="card1"></div>
 	
 					</div>
@@ -72,18 +91,35 @@
 				<canvas id="canvas" width="1000" height="500"></canvas>
 
 				<div id = "generalAnimationControlSection">
-					<!-- Table for buttons to control general animation (play/pause/undo/etc) ->
-					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->
-
+				
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				</div>
 				</div>
 			</div> <!-- mainContent -->
-			
+			<img class="image" src="timages/complexity/com_tree.png" alt="Avatar" style="width:60%">
+			<br>
+			<br>
+			<br>
 			<div id="footer">  
 			</div>
 
 		</div><!-- container -->
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+				  content.style.display = "none";
+				} else {
+				  content.style.display = "block";
+				}
+			  });
+			}
+			</script>
 	</body>
 </html>

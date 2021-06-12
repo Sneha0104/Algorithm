@@ -49,9 +49,54 @@
 				<div class="column">
 
 					<div class="card1"></div>
-					<div class="card">..</div>
+					<div class="card">
+						<button type="button" class="collapsible">View Code</button>
+						<div class="content">
+						<p> <code>
+							Heapsort(A) {</br></br>
+								BuildHeap(A)</br>
+								for i <- length(A) downto 2 {</br>
+									&nbsp;exchange A[1] <-> A[i]</br>
+									&nbsp;heapsize <- heapsize -1</br>
+									&nbsp;Heapify(A, 1)</br>
+							 }
+							</br></br>
+							 
+							 
+							 BuildHeap(A) {</br>
+								heapsize <- length(A)</br>
+								for i <- floor(length/2) downto 1</br>
+								&nbsp;Heapify(A, i)
+							 }
+							</br>	</br>				 
+							 
+							 
+							 Heapify(A, i) {</br>
+								le <- left(i)</br>
+								ri <- right(i)</br>
+								if (le<=heapsize) and (A[le]>A[i])</br>
+								&nbsp;   largest <- le</br>
+								else largest <- i </br>
+								if (ri<=heapsize) and (A[ri]>A[largest])</br>
+								&nbsp;largest <- ri</br>
+								if (largest != i) {</br>
+								&nbsp;exchange A[i] <-> A[largest]</br>
+								&nbsp;Heapify(A, largest)</br>
+								}
+							 }</br>
+							</code></p>
+						</div>
+					</div>
 					<div class="card1"></div>
-					<div class="card">..</div>
+					<div class="card">
+						<div style="text-align: center;">
+							<b>Time Complexity</b></div>
+							<p>
+								Best Case: Ω(n log(n))</br></br>
+								Average Case: Θ(n log(n))</br></br>
+								Worst Case: O(n log(n))</br>
+							</p>
+					</div>
 					<div class="card1"></div>
 
 				</div>
@@ -80,6 +125,22 @@
 		</div>
 
 	</div><!-- container -->
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			  content.style.display = "none";
+			} else {
+			  content.style.display = "block";
+			}
+		  });
+		}
+		</script>
 </body>
 
 </html>

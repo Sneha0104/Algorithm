@@ -53,9 +53,41 @@
 					<div class="column">
 	
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<button type="button" class="collapsible">View Code</button>
+							<div class="content">
+							<p> <code>function Dijkstra(Graph, source):</br>
+for each vertex v in Graph:</br>
+&nbsp;dist[v] = infinity	</br>
+&nbsp;previous[v] = undefined	</br>
+&nbsp;dist[source] = 0	</br>
+Q := the set of all nodes in Graph	</br>
+while Q is not empty:</br>
+&nbsp;u := node in Q with smallest 
+&nbsp;dist[]</br>
+&nbsp;remove u from Q</br>
+&nbsp;for each neighbor v of u:</br>
+&nbsp;&nbsp;alt = dist[u]+dist_between(u,v)</br>
+&nbsp;&nbsp;if alt < dist[v]</br>
+&nbsp;&nbsp;&nbsp;dist[v] = alt</br>
+&nbsp;&nbsp;&nbsp;previous[v] = u</br>
+&nbsp;return previous[ ]</br>
+							</code></p>
+						</div>
+						</div>
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<div style="text-align: center;">
+								<b>Time Complexity</b></div>
+								<p>
+									<b>Adjacency list implementation:</b></br>
+									Time Complexity: O((e+v)*logv)</br></br>
+		
+									<b>Adjacency matrix implementation: </b></br>
+									Time Complexity: O(v^2 + e*logv)</br></br>
+									where v stands for vertices and e stands for edges
+								</p>
+						</div>
 						<div class="card1"></div>
 	
 					</div>
@@ -83,5 +115,21 @@
 			</div>
 
 		</div><!-- container -->
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+				  content.style.display = "none";
+				} else {
+				  content.style.display = "block";
+				}
+			  });
+			}
+			</script>
 	</body>
 </html>

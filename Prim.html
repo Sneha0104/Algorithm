@@ -44,16 +44,49 @@
             <a style="font-size: 20px;"> Data Structure and Algorithms Visualizations</a>
         </div>
  
-				<h1 style="text-align: center;">Prim Minimum Cost Spanning Treeh</h1>
+				<h1 style="text-align: center;">Prim Minimum Cost Spanning Tree</h1>
 
 			<div id = "mainContent"> 
 				<div class="row">
 					<div class="column">
 	
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<button type="button" class="collapsible">View Code</button>
+						<div class="content">
+						<p> <code>
+							ReachSet = {0}; </br>                   
+   UnReachSet = {1, 2, ..., N-1}; </br>  
+   SpanningTree = {}; </br>  
+
+   while ( UnReachSet ≠ empty ) </br>  
+   { </br>  
+      Find edge e = (x, y) such that: </br>  
+         1. x ∈ ReachSet </br>  
+	 2. y ∈ UnReachSet </br>  
+	 3. e has smallest cost </br>  
+
+      SpanningTree = SpanningTree ∪ {e}; </br>  
+
+      ReachSet   = ReachSet ∪ {y}; </br>  
+      UnReachSet = UnReachSet - {y}; </br>  
+   }
+							</code></p>
+						</div>
+						</div>
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<div style="text-align: center;">
+								<b>Time Complexity</b></div>
+								<p>
+									<b>Adjacency list implementation:</b></br>
+									Time Complexity: O((e+v)*logv)</br></br>
+		
+									<b>Adjacency matrix implementation: </b></br>
+									Time Complexity: O(v^2)</br></br>
+									where v stands for vertices and e stands for edges
+								</p>
+						</div>
 						<div class="card1"></div>
 	
 					</div>
@@ -82,5 +115,21 @@
 			</div>
 
 		</div><!-- container -->
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+				  content.style.display = "none";
+				} else {
+				  content.style.display = "block";
+				}
+			  });
+			}
+			</script>
 	</body>
 </html>
