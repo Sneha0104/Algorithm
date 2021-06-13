@@ -56,8 +56,45 @@
 						<div class="card">
 							<button type="button" class="collapsible">View Code</button>
 						<div class="content">
-						<p> <code>
-							</code></p>
+						<p><br><b>Insertion</b><br><br>
+						 1) If the bucket is not full (at most b 1 entries after the insertion), add the record.<br>
+2) Otherwise, split the bucket.
+   1) Allocate new leaf and move half the buckets elements to the new bucket.<br>
+   2) Insert the new leafs smallest key and address into the parent.<br>
+   3) If the parent is full, split it too.<br>
+       1) Add the middle key to the parent node.<br>
+   4) Repeat until a parent is found that need not split.<br>
+3) If the root splits, create a new root which has one key and two pointers. (That is, the value that gets pushed to the new root gets removed from the original node)<br>
+
+<br><br>
+<b>Deletion</b><br><br>
+1) Start at the root and go up to leaf node containing the key K<br>
+2) Find the node n on the path from the root to the leaf node containing K<br>
+    A. If n is root, remove K<br>
+         &nbsp a. if root has mode than one keys, done<br>
+         &nbsp b. if root has only K<br>
+            &nbsp&nbsp i) if any of its child node can lend a node<br>
+               &nbsp&nbsp&nbspBorrow key from the child and adjust child links<br>
+            &nbsp&nbspii) Otherwise merge the children nodes it will be new root<br>
+         &nbspc. If n is a internal node, remove K<br>
+            &nbsp&nbspi) If n has at lease ceil(m/2) keys, done!<br>
+            &nbsp&nbspii) If n has less than ceil(m/2) keys,<br>
+                &nbsp&nbsp&nbspIf a sibling can lend a key,<br>
+                &nbsp&nbsp&nbspBorrow key from the sibling and adjust keys in n and the parent node<br>
+                    &nbsp&nbsp&nbsp&nbspAdjust child links<br>
+                &nbsp&nbsp&nbspElse<br>
+                    &nbsp&nbsp&nbsp&nbspMerge n with its sibling<br>
+                    Adjust child links<br>
+         &nbsp d. If n is a leaf node, remove K<br>
+            &nbsp&nbspi) If n has at least ceil(M/2) elements, done!<br>
+                &nbsp&nbsp&nbspIn case the smallest key is deleted, push up the next key<br>
+            &nbsp&nbspii) If n has less than ceil(m/2) elements<br>
+            &nbsp&nbspIf the sibling can lend a key<br>
+                &nbsp&nbsp&nbspBorrow key from a sibling and adjust keys in n and its parent node<br>
+            &nbsp&nbspElse<br>
+                &nbsp&nbsp&nbspMerge n and its sibling<br>
+                &nbsp&nbsp&nbspAdjust keys in the parent node<br>
+							</p>
 						</div>
 						</div>
 						<div class="card1"></div>
