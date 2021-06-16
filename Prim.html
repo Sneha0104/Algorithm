@@ -55,6 +55,22 @@
 							<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 						<p> <code>
+							ReachSet = {0}; </br>                   
+   UnReachSet = {1, 2, ..., N-1}; </br>  
+   SpanningTree = {}; </br>  
+
+   while ( UnReachSet ≠ empty ) </br>  
+   { </br>  
+      Find edge e = (x, y) such that: </br>  
+         1. x ∈ ReachSet </br>  
+	 2. y ∈ UnReachSet </br>  
+	 3. e has smallest cost </br>  
+
+      SpanningTree = SpanningTree ∪ {e}; </br>  
+
+      ReachSet   = ReachSet ∪ {y}; </br>  
+      UnReachSet = UnReachSet - {y}; </br>  
+   }
 							</code></p>
 						</div>
 						</div>

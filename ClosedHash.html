@@ -56,11 +56,47 @@
 							<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 						<p> <code>
+						<br>
+						<b>void insertItem(int key)</b>{<br>
+<br><br>
+    int index = hashFunction(key);<br>
+    table[index].push_back(key); <br>
+<br><br>
+}<br>
+<br><br>
+<b>void deleteItem(int key)</b>
+{<br><br>
+  &nbsp // get the hash index of key<br>
+  &nbsp int index = hashFunction(key);<br>
+  
+  &nbsp // find the key in (inex)th list<br>
+  &nbsp list <int> :: iterator i;<br>
+  &nbsp for (i = table[index].begin();<br>
+           &nbsp&nbsp i != table[index].end(); i++) {<br>
+    &nbsp if (*i == key)<br>
+      &nbsp&nbsp break;<br>
+  &nbsp }<br>
+  
+  // if key is found in hash table, remove it<br>
+  &nbsp if (i != table[index].end())<br>
+     &nbsp&nbsp table[index].erase(i);<br><br>
+}
 							</code></p>
 						</div>
 						</div>
 						<div class="card1"></div>
-						<div class="card">..</div>
+						<div class="card">
+							<div style="text-align: center;">
+								<b>Time Complexity</b></div>
+								<p>
+									<b>Best/Average</b></br>
+									Time Complexity: O(1)</br></br>
+		
+									<b>Worst/Collision</b></br>
+									Time Complexity: O(n) </br></br>
+
+								</p>
+						</div>
 						<div class="card1"></div>
 	
 					</div>

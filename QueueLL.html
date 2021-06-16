@@ -54,6 +54,31 @@
 							<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 						<p> <code>
+							<b>Insertion</b></br>
+							Step 1: Allocate the space for the new node PTR</br>
+Step 2: SET PTR -> DATA = VAL</br>
+Step 3: IF FRONT = NULL</br>
+SET FRONT = REAR = PTR</br>
+SET FRONT -> NEXT = REAR -> NEXT = NULL</br>
+ELSE</br>
+SET REAR -> NEXT = PTR</br>
+SET REAR = PTR</br>
+SET REAR -> NEXT = NULL</br>
+[END OF IF]</br>
+Step 4: END</br>
+</br>
+
+
+<b>Deletion</b></br>
+Step 1: IF FRONT = NULL</br>
+Write " Underflow "</br>
+Go to Step 5</br>
+[END OF IF]</br>
+Step 2: SET PTR = FRONT</br>
+Step 3: SET FRONT = FRONT -> NEXT</br>
+Step 4: FREE PTR</br>
+Step 5: END</br>
+
 							</code></p>
 						</div>
 						</div>

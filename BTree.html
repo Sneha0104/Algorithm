@@ -56,8 +56,35 @@
 						<div class="card">
 							<button type="button" class="collapsible">View Code</button>
 						<div class="content">
-						<p> <code>
-							</code></p>
+						<p> 
+						<br><b>Insertion</b><br><br>
+						1) Initialize x as root.<br>
+2) While x is not leaf, do following,<br>
+&nbspa) Find the child of x that is going to be traversed next. Let the child be y.<br>
+&nbspb) If y is not full, change x to point to y.<br>
+&nbspc) If y is full, split it and change x to point to one of the two parts of y. If k is smaller than mid key in y, then set x as the first part of y. Else second part of y. When we split y, we move a key from y to its parent x.<br>
+3) The loop in step 2 stops when x is leaf. x must have space for 1 extra key as we have been splitting all nodes in advance. So simply insert k to x.<br>
+
+<br><br>
+<b>Deletion</b><br><br>
+1. If the key k is in node x and x is a leaf, delete the key k from x.<br><br>
+
+2. If the key k is in node x and x is an internal node, do the following.<br><br>
+
+    &nbsp &nbsp a) If the child y that precedes k in node x has at least t keys, then find the predecessor k0 of k in the sub-tree rooted at y. Recursively delete k0, and replace k by k0 in x. (We can find k0 and delete it in a single downward pass.)<br>
+
+    &nbsp &nbsp b) If y has fewer than t keys, then, symmetrically, examine the child z that follows k in node x. If z has at least t keys, then find the successor k0 of k in the subtree rooted at z. Recursively delete k0, and replace k by k0 in x. (We can find k0 and delete it in a single downward pass.)<br>
+
+     &nbsp &nbsp c) Otherwise, if both y and z have only t-1 keys, merge k and all of z into y, so that x loses both k and the pointer to z, and y now contains 2t-1 keys. Then free z and recursively delete k from y.<br>
+
+<br>
+
+3. If the key k is not present in internal node x, determine the root x.c(i) of the appropriate subtree that must contain k, if k is in the tree at all. If x.c(i) has only t-1 keys, execute step 3a or 3b as necessary to guarantee that we descend to a node containing at least t keys. Then finish by recursing on the appropriate child of x.<br>
+<br>
+    &nbsp &nbsp a) If x.c(i) has only t-1 keys but has an immediate sibling with at least t keys, give x.c(i) an extra key by moving a key from x down into x.c(i), moving a key from x.c(i) ’s immediate left or right sibling up into x, and moving the appropriate child pointer from the sibling into x.c(i).<br>
+
+    &nbsp &nbsp b) If x.c(i) and both of x.c(i)’s immediate siblings have t-1 keys, merge x.c(i) with one sibling, which involves moving a key from x down into the new merged node to become the median key for that node.<br>
+						</p>
 						</div>
 						</div>
 						<div class="card1"></div>
@@ -99,7 +126,10 @@
 			  </div>
 					</div></div>
 			</div> <!-- mainContent -->
-			
+			<img class="image" src="timages/complexity/com_tree.png" alt="Avatar" style="width:60%">
+			<br>
+			<br>
+			<br>
 			<div id="footer">  
 			</div>
 

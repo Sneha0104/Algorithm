@@ -53,6 +53,37 @@
 						<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 						<p> <code>
+							Heapsort(A) {</br></br>
+								BuildHeap(A)</br>
+								for i <- length(A) downto 2 {</br>
+									&nbsp;exchange A[1] <-> A[i]</br>
+									&nbsp;heapsize <- heapsize -1</br>
+									&nbsp;Heapify(A, 1)</br>
+							 }
+							</br></br>
+							 
+							 
+							 BuildHeap(A) {</br>
+								heapsize <- length(A)</br>
+								for i <- floor(length/2) downto 1</br>
+								&nbsp;Heapify(A, i)
+							 }
+							</br>	</br>				 
+							 
+							 
+							 Heapify(A, i) {</br>
+								le <- left(i)</br>
+								ri <- right(i)</br>
+								if (le<=heapsize) and (A[le]>A[i])</br>
+								&nbsp;   largest <- le</br>
+								else largest <- i </br>
+								if (ri<=heapsize) and (A[ri]>A[largest])</br>
+								&nbsp;largest <- ri</br>
+								if (largest != i) {</br>
+								&nbsp;exchange A[i] <-> A[largest]</br>
+								&nbsp;Heapify(A, largest)</br>
+								}
+							 }</br>
 							</code></p>
 						</div>
 					</div>

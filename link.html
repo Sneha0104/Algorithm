@@ -53,21 +53,77 @@
 					<div class="card">
 						<button type="button" class="collapsible">View Code</button>
 						<div class="content">
-						<p> <code>
+							<p> <code>
+							<b>Inserting at starting:</b> </br> </br>
+  def insertAtbegning(self,value):</br>
+    newNode = Node(value)</br>
+    if self.firstNode != None:</br>
+      newNode.link = self.firstNode</br>
+      self.firstNode = newNode</br>
+    else:</br>
+	  self.firstNode = newNode</br>
+	</br>
+<b>Inserting at end :</b> </br> </br>
+  def insertAtEnd(self,value):</br>
+   newNode = Node(value)</br>
+   if self.firstNode != None:</br>
+     current = self.firstNode</br>
+     while current.link != None:</br>
+       current = current.link</br>
+     current.link = newNode</br>
+   else:</br>
+	 self.firstNode = newNode</br> </br>
+	 <b>Display :</b> </br> </br>
+	 def display(self):</br>
+	 if self.firstNode == None:</br>
+	   print("List is empty")</br>
+	   return </br>
+	 current = self.firstNode</br>
+	 while current.link != None:</br>
+	   print(current.value)</br>
+	   current = current.link</br> </br>
+
+	   <b>Delete :</b> </br> </br>
+
+	   def delete(self,value): </br>
+	   if self.firstNode == None: </br>
+		 print("list is empty") </br>
+		 return </br>
+	   if self.firstNode == value: </br>
+		 temp = self.firstNode </br>
+		 self.firstNode = temp.link </br>
+		 temp = None </br>
+		 return      </br>
+	   current = self.firstNode </br>
+		 while current.link != None: </br>
+		   if current.link.value == value: </br>
+			 temp = current.link </br>
+			 current.link = temp.link </br>
+			 temp = None  </br>
+			 return </br>
+		   current = current.link </br>
+		 print("Element is not found") </br>
 							</code></p>
 						</div>
 					</div>
 					<div class="card1"></div>
 					<div class="card">
 						<div style="text-align: center;">
-							<b>Time Complexity</b></div>
-							<p>
-								<b>Insertion:</b> Insert element to tail of Linked List </br>
-								Time Complexity: O(1)</br></br>
-	
-								<b>Deletion:</b> Remove element from head of Linked List </br>
-								Time Complexity: O(1) </br></br>
-							</p>
+							<b>Time Complexity</b>
+						</div>
+						<p>
+							<b>Get Root:</b> It returns the root element of Min Heap. </br>
+							Time Complexity: O(1).</br></br>
+
+							<b>Extract Minimum:</b> Removes the minimum element from MinHeap. </br>
+							Time Complexity: O(Logn) </br></br>
+
+							<b>Insert:</b> Insert an element</br>
+							Time Complexity: O(Logn) </br></br>
+
+							<b>Delete:</b> Deleting an element</br>
+							Time Complexity: O(Logn)
+						</p>
 					</div>
 					<div class="card1"></div>
 
@@ -99,19 +155,19 @@
 		<script>
 			var coll = document.getElementsByClassName("collapsible");
 			var i;
-			
+
 			for (i = 0; i < coll.length; i++) {
-			  coll[i].addEventListener("click", function() {
-				this.classList.toggle("active");
-				var content = this.nextElementSibling;
-				if (content.style.display === "block") {
-				  content.style.display = "none";
-				} else {
-				  content.style.display = "block";
-				}
-			  });
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
 			}
-			</script>
+		</script>
 </body>
 
 </html>
