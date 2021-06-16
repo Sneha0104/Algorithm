@@ -54,7 +54,31 @@
 					<div class="card">
 						<button type="button" class="collapsible">View Code</button>
 						<div class="content">
-						<p> <code>
+						<p> <code><br><br>
+						<b>bool push(int x)</b>
+{<br><br>
+    &nbsp if (top >= (MAX - 1)) {<br>
+    &nbsp &nbsp cout << "Stack Overflow";<br>
+    &nbsp &nbsp return false;<br>
+    }<br>
+    &nbsp else {<br>
+        &nbsp &nbsp a[++top] = x;<br>
+        &nbsp&nbsp cout << x << " pushed into stack\n";<br>
+        &nbsp&nbsp return true;<br>
+    }<br><br>
+}<br><br>
+<b>
+int pop()</b>
+{<br><br>
+    &nbsp if (top < 0) {<br>
+     &nbsp&nbsp   cout << "Stack Underflow";<br>
+        &nbsp&nbsp return 0;<br>
+    }<br>
+    &nbspelse {<br>
+        &nbsp&nbsp int x = a[top--];<br>
+        &nbsp&nbsp return x;<br>
+    }<br><br>
+}
 							</code></p>
 						</div>
 					</div>

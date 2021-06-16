@@ -56,6 +56,7 @@
 							<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 						<p> <code>
+<<<<<<< HEAD
 						<b>void insertItem(int key)</b>{
 <br>
 &nbsp int index = hashFunction(key);<br>
@@ -79,6 +80,34 @@
   &nbsp if (i != table[index].end())<br>
      &nbsp &nbsp table[index].erase(i);<br>
 }
+=======
+							<b>linear_probing_insert(K)</b></br>
+if (table is full) error</br>
+&nbsp;probe = h(K)</br>
+while (table[probe] occupied)</br>
+&nbsp;probe = (probe + 1) mod M</br>
+table[probe] = K</br></br>
+
+<b>double_hash_insert(K)</b></br>
+if(table is full) error</br>
+&nbsp;probe = h1(K)</br>
+&nbsp;offset = h2(K)</br>
+while (table[probe] occupied)</br>
+&nbsp;probe = (probe + offset) mod M</br>
+table[probe] = K</br></br>
+
+<b>Quadratic Probing</b></br>
+1. Retrieve key k</br>
+2. Compute hash function h[k] = k % size of table</br>
+3. If hash table is empty</br>
+&nbsp;&nbsp;insert key at h[k]</br>
+    else</br>
+	&nbsp;find another empty place to insert the key</br>
+	&nbsp;3.1    Use quadratic probing to compute the hash value of the key again  </br>
+	&nbsp;3.2    If   hash table place is empty then insert key at h[k] and exit</br>
+	&nbsp;&nbsp;&nbsp;      else</br>
+	&nbsp;&nbsp;&nbsp;  Repeat 3.1 step again  </br>
+>>>>>>> 60abc930861e055425d01968dc463619bf50bf98
 							</code></p>
 						</div>
 						</div>

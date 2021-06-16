@@ -54,6 +54,54 @@
 						<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 						<p> <code>
+						<b>void push(int data)</b>
+{<br><br>
+     
+    
+    &nbsp struct Node* temp;<br>
+    &nbsp temp = new Node();<br>
+ 
+    
+    &nbsp if (!temp)
+    {<br>
+        &nbsp&nbsp cout << "\nHeap Overflow";<br>
+        &nbsp&nbsp exit(1);<br>
+    &nbsp}<br>
+ 
+   
+    &nbsp temp->data = data;<br>
+ 
+
+    &nbsp temp->link = top;<br>
+ 
+    &nbsp top = temp;<br><br>
+}
+<br><br>
+<b>void pop()</b>
+{<br><br>
+    &nbsp struct Node* temp;<br>
+ 
+
+     &nbspif (top == NULL)
+    {<br>
+         &nbsp &nbsp cout << "\nStack Underflow" << endl;<br>
+         &nbsp &nbsp exit(1);<br>
+     &nbsp}<br>
+     &nbspelse
+    {<br>
+         
+        
+         &nbsp &nbsp temp = top;<br>
+ 
+        
+         &nbsp &nbsp top = top->link;<br>
+ 
+        
+         &nbsp &nbsp temp->link = NULL;<br>
+
+         &nbsp &nbsp free(temp);<br>
+     &nbsp}<br><br>
+}
 							</code></p>
 						</div>
 					</div>
