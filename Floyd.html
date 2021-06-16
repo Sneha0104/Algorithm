@@ -4,7 +4,7 @@
 <head>
 
 	<title>
-		Kruskal MST Visualzation
+		Floyd-Warshall Visualzation
 	</title>
 
 	<!-- css sheet for how the page is laid out -->
@@ -33,7 +33,7 @@
 
 	<script type="text/javascript" src="AlgorithmLibrary/Algorithm.js"> </script>
 	<script type="text/javascript" src="AlgorithmLibrary/Graph.js"> </script>
-	<script type="text/javascript" src="AlgorithmLibrary/Kruskal.js"> </script>
+	<script type="text/javascript" src="AlgorithmLibrary/Floyd.js"> </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -46,7 +46,7 @@
 			<a class="active" href="index.html" style="font-size: 20px;"><i class="fa fa-fw fa-home"></i> Home</a>
 			<a style="font-size: 20px;"> Data Structure and Algorithms Visualizations</a>
 		</div>
-		<h1 style="text-align: center;">Kruskals Algorithm</h1>
+		<h1 style="text-align: center;">Floyd-Warshall Algorithm</h1>
 		<div id="mainContent">
 			<div class="row">
 				<div class="column">
@@ -56,44 +56,15 @@
 						<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 					<p> 
-					<b>void AddWeightedEdge(int u, int v, int w) {</b><br>
+					<b>floydwarshall(cost) {</b><br>
 					<br>
-	
-  						G.push_back(make_pair(w, edge(u, v)));<br><b>}<br>
-						  <br>
-					int find_set(int i) {</b><br>
-					<br>
-			
-						if (i == parent[i])<br>
-						<br>
-							return i;<br><br>
-						else
-							<br><br>
-							return find_set(parent[i]);<br>
-					<b}<br>
-					<br>
-					<b>void union_set(int u, int v) {</b><br>
-					<br>
-  					parent[u] = parent[v];<br>
-					}<br>
-					<br>
-					<b>void kruskal() {</b><br>
-					<br>
-					int i, uRep, vRep;<br>
-					sort(G.begin(), G.end());  <br>
-					for (i = 0; i < G.size(); i++) {<br>
-					<br>
-						uRep = find_set(G[i].second.first);<br>
-						vRep = find_set(G[i].second.second);<br>
-						if (uRep != vRep) {<br>
-						<br>
-						T.push_back(G[i]);  <br>
-						union_set(uRep, vRep);<br>
-						}<br>
-					}
+   for k := 0 to n, do<br>
+   &nbsp; for i := 0 to n, do<br>
+   &nbsp; &nbsp;     for j := 0 to n, do<br>
+   &nbsp; &nbsp; &nbsp;  if (cost[i,k] + cost[k,j] < cost[i,j])<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; cost[i,j] := cost[i,k] + cost[k,j]<br>
+   display the current cost matrix<br>
 					<b>}</b>
-					
-					
 					</p>
 					</div>
 					</div>
@@ -103,10 +74,10 @@
 							<b>Time Complexity</b></div>
 							<p>
 								<b>Adjacency list implementation:</b></br>
-								Time Complexity: O(e * loge) or O(e * logv)</br></br>
+								Time Complexity: O(v^3)</br></br>
 	
 								<b>Adjacency matrix implementation: </b></br>
-								Time Complexity: O(e * loge) or O(e * logv)</br></br>
+								Time Complexity: O(v^3)</br></br>
 								where v stands for vertices and e stands for edges
 							</p></div>
 					<div class="card1"></div>
