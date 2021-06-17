@@ -59,25 +59,32 @@
 						<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 							<p> <code>
-							<b>minHeapify(int pos){</b></br>
-							if (!isLeaf(pos)){ </br>
-								&ensp;if( Heap[pos] > Heap[lC(pos)]
-								&ensp;|| Heap[pos]>Heap[rC(pos)]) {</br>
-					
-									
-										&ensp;if (Heap[lC(pos)]< Heap[rC(pos)]) {
-											</br>
-											&ensp;	&ensp;swap(pos, lC(pos));</br>
-											&ensp;	&ensp;minHeapify(lC(pos));
-									}
-								</br>
-								&ensp;else {</br>
-										&ensp;	&ensp;swap(pos, rC(pos));</br>
-										&ensp;	&ensp;minHeapify(rC(pos));</br>
-									}
-            				}
-        }
-    }
+								<b>For min_heap():</b></br>
+
+								Begin</br>
+								   &ensp;Declare function min_heap(int *a, int m, int n)</br>
+								   &ensp; &ensp;Declare j, t of the integer datatype.</br>
+								   &ensp; &ensp;Initialize t = a[m].</br>
+								   &ensp; &ensp;j = 2 * m;</br>
+								   &ensp; &ensp;while (j<= n) do</br>
+								   &ensp; &ensp;&ensp;if (j< n && a[j+1]< a[j]) then</br>
+								   &ensp; &ensp;&ensp; &ensp;j = j + 1</br>
+								   &ensp; &ensp;&ensp;if (t< a[j]) then</br>
+								   &ensp; &ensp;&ensp; &ensp;break</br>
+								   &ensp; &ensp;&ensp;else if (t >= a[j]) then</br>
+								   &ensp; &ensp;&ensp; &ensp;a[j / 2] = a[j]</br>
+								   &ensp; &ensp;&ensp; &ensp;j = 2 * j</br>
+								   &ensp; &ensp;a[j/2] = t</br>
+								   &ensp; return</br>
+								End.</br>
+								<b>For build_minheap:</b></br>
+								
+								Begin</br>
+								&ensp;Declare function build_minheap(int *a,int n).</br>
+								   &ensp; &ensp;Declare k</br>
+								   &ensp; &ensp;for(k = n/2; k >= 1; k--)</br>
+								   &ensp; &ensp;&ensp;Call function min_heap(a,k,n)</br>
+								End.</br>
 								
 						
 							</br>
