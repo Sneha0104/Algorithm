@@ -22,10 +22,10 @@
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 1px black; /* this adds the "card" effect */
-  padding-left: 0px;
-  padding-bottom: 0px;
-  padding-top: 0px;
-  padding-right: 0px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
   text-align: left;
   background-color: lightgrey;
 }
@@ -231,9 +231,9 @@ code {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-/* .active1, .collapsible:hover {
-  background-color: #444;
-} */
+.active1, .collapsible:hover {
+  background-color: lightgrey;
+}
 .collapsible:after {
   font-size: 13px;
   color: #444;
@@ -241,10 +241,10 @@ code {
   margin-left: 5px;
 }
 
-/* .active1:after {
+.active1:after {
   content: "\2796"; 
   color: #444;
-} */
+}
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
