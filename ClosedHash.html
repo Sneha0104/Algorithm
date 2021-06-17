@@ -56,6 +56,31 @@
 							<button type="button" class="collapsible">View Code</button>
 						<div class="content">
 						<p> <code>
+<<<<<<< HEAD
+						<b>void insertItem(int key)</b>{
+<br>
+&nbsp int index = hashFunction(key);<br>
+&nbsp table[index].push_back(key); <br>
+}<br>
+<br>
+<b>void deleteItem(int key)</b>
+{<br>
+  &nbsp // get the hash index of key<br>
+  &nbsp int index = hashFunction(key);<br>
+  
+  &nbsp // find the key in (inex)th list<br>
+  &nbsp list <int> :: iterator i;<br>
+  &nbsp for (i = table[index].begin();<br>
+           &nbsp&nbsp i != table[index].end(); i++) {<br>
+    &nbsp if (*i == key)<br>
+      &nbsp&nbsp break;<br>
+  &nbsp }<br>
+  
+  // if key is found in hash table, remove it<br>
+  &nbsp if (i != table[index].end())<br>
+     &nbsp &nbsp table[index].erase(i);<br>
+}
+=======
 							<b>linear_probing_insert(K)</b></br>
 if (table is full) error</br>
 &nbsp;probe = h(K)</br>
@@ -82,11 +107,12 @@ table[probe] = K</br></br>
 	&nbsp;3.2    If   hash table place is empty then insert key at h[k] and exit</br>
 	&nbsp;&nbsp;&nbsp;      else</br>
 	&nbsp;&nbsp;&nbsp;  Repeat 3.1 step again  </br>
+>>>>>>> 60abc930861e055425d01968dc463619bf50bf98
 							</code></p>
 						</div>
 						</div>
 						<div class="card1"></div>
-						<div class="card">
+						<div class="card2">
 							<div style="text-align: center;">
 								<b>Time Complexity</b></div>
 								<p>
